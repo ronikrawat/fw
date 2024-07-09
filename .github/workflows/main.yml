@@ -1,9 +1,9 @@
-name: Run new.py
+name: Run Selenium script
 
 on: [push]
 
 jobs:
-  run-python-script:
+  run-selenium-script:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,5 +15,15 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Run new.py
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install selenium
+
+    - name: Set up ChromeDriver
+      uses: nanasess/setup-chromedriver@v1
+      with:
+        version: latest
+
+    - name: Run Selenium script
       run: python new.py
