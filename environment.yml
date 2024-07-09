@@ -1,0 +1,10 @@
+name: myenv  # Replace with your desired environment name
+
+channels:
+  - conda-forge  # Replace or add channels as needed
+
+dependencies:
+  - python=3.10  # Adjust Python version as needed
+  - numpy  # Example package
+  - pandas  # Example package
+  - ... (list other required packages)
