@@ -1,0 +1,37 @@
+name: Python Package with Conda
+
+on: [push]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.10'
+
+    - name: Create conda environment
+      run: |
+        conda env create -f environment.yml  # Creates environment from 'environment.yml'
+
+    - name: Install dependencies
+      run: |
+        conda activate myenv  # Activate the created environment (replace with your env name if different)
+        # Assuming dependencies are listed in 'environment.yml'
+
+    - name: Lint with flake8
+      run: |
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # Exit codes for flake8: https://flake8.pycqa.org/en/latest/user/usage.html#exit-codes
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Test with pytest
+      run: |
+        pytest
+
