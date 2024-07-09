@@ -34,14 +34,17 @@ jobs:
         CHROME_DRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
         wget -N https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
         unzip chromedriver_linux64.zip
-        sudo mv -f chromedriver /usr/local/bin/chromedriver
-        sudo chown root:root /usr/local/bin/chromedriver
-        sudo chmod 0755 /usr/local/bin/chromedriver
+        mv -f chromedriver /usr/local/bin/chromedriver
+        chown root:root /usr/local/bin/chromedriver
+        chmod 0755 /usr/local/bin/chromedriver
+
+    - name: Set up Xvfb
+      run: Xvfb :99 -ac &
 
     - name: Run Selenium script
       env:
-        PATH: /usr/local/bin:$PATH
         DISPLAY: :99
-      run: |
-        sudo Xvfb :99 -ac &
-        python new.py
+        PATH: /usr/local/bin:$PATH
+        CHROME_BIN: /usr/bin/google-chrome
+        CHROME_PATH: /usr/bin/google-chrome
+      run: python new.py
