@@ -20,10 +20,21 @@ jobs:
         python -m pip install --upgrade pip
         pip install selenium
 
-    - name: Set up ChromeDriver
-      uses: nanasess/setup-chromedriver@v1
-      with:
-        version: latest
+    - name: Install Chrome
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+
+    - name: Install ChromeDriver
+      run: |
+        CHROME_DRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
+        wget -N https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
+        unzip chromedriver_linux64.zip
+        sudo mv -f chromedriver /usr/local/bin/chromedriver
+        sudo chown root:root /usr/local/bin/chromedriver
+        sudo chmod 0755 /usr/local/bin/chromedriver
 
     - name: Run Selenium script
+      env:
+        PATH: /usr/local/bin:$PATH
       run: python new.py
