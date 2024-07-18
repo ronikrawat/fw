@@ -16,7 +16,6 @@ jobs:
     env:
       ENV: test
       BROWSER: chrome
-      HEADLESS: true
 
     steps:
     - name: Checkout repository
@@ -44,4 +43,4 @@ jobs:
 
     - name: Run tests
       run: |
-        xvfb-run --server-args='-screen 0 1920x1080x24' pytest --capture=tee-sys --disable-warnings --env=$ENV --browser=$BROWSER --headless=$HEADLESS
+        xvfb-run --server-args='-screen 0 1920x1080x24' pytest --capture=tee-sys --disable-warnings
