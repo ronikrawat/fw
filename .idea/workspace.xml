@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d64d160-f704-4559-ad1b-b694b42dd417" name="Changes" comment="passing test data using parametrize marker">
+    <list default="true" id="0d64d160-f704-4559-ad1b-b694b42dd417" name="Changes" comment="formating">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exel_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/exel_lib.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom/homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pom/homepage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/pom/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/pom/register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_register.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -52,6 +50,27 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/ronik/Desktop/framework/framework&quot;
   }
 }</component>
+  <component name="QodanaCIConfigService">
+    <option name="ciType" value="GITHUB" />
+    <option name="path" value="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" />
+  </component>
+  <component name="QodanaHighlightedReportService">
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="C:\Users\ronik\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
+        <option name="reportGuid" value="9a5dbcf6-b7eb-4d8b-94f1-bd3232a38b3b" />
+        <option name="reportName" value="framework/qodana/2024-07-18" />
+      </LocalReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\ronik\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="9a5dbcf6-b7eb-4d8b-94f1-bd3232a38b3b" reportId="framework/qodana/2024-07-18" />
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ronik\Desktop\framework\framework" />
@@ -208,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721322122864</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="formating">
+      <option name="closed" value="true" />
+      <created>1721322881225</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721322881225</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,6 +254,7 @@
     <MESSAGE value="Reading locators from excel to dictonary" />
     <MESSAGE value="Reading locators from excel to class variable" />
     <MESSAGE value="passing test data using parametrize marker" />
-    <option name="LAST_COMMIT_MESSAGE" value="passing test data using parametrize marker" />
+    <MESSAGE value="formating" />
+    <option name="LAST_COMMIT_MESSAGE" value="formating" />
   </component>
 </project>

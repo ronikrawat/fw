@@ -9,8 +9,18 @@ from pom.register import RegisterationPage
 # env = "test"
 # browser = "chrome"
 def pytest_addoption(parser):
-    parser.addoption("--env", action="store", default="test", dest="env", help="Pass the env: Test or Stage[env=test]")
-    parser.addoption("--browser", action="store", default="chrome", dest="browser", help="Pass browser[browser=chrome]")
+    parser.addoption(
+        "--env",
+        action="store",
+        default="test",
+        dest="env",
+        help="Pass the env: Test or Stage[env=test]")
+    parser.addoption(
+        "--browser",
+        action="store",
+        default="chrome",
+        dest="browser",
+        help="Pass browser[browser=chrome]")
     parser.addoption("--headless", action="store_true", dest="headless")
 
 

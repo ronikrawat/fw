@@ -2,9 +2,17 @@ from pytest import mark
 
 
 header = "gender, fname, lname, email, password"
-test_data = [("Male", "Steve", "Jobs", "steve.jobs@apple.com", "Password123"),
-             ("Female", "Nicole", "Turner", "nicole.turner@apple.com", "Password123")
-             ]
+test_data = [
+    ("Male",
+     "Steve",
+     "Jobs",
+     "steve.jobs@apple.com",
+     "Password123"),
+    ("Female",
+     "Nicole",
+     "Turner",
+     "nicole.turner@apple.com",
+     "Password123")]
 
 
 @mark.parametrize(header, test_data)
