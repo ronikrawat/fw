@@ -41,7 +41,11 @@ jobs:
         sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
         sudo chown root:root /usr/local/bin/chromedriver
         sudo chmod 0755 /usr/local/bin/chromedriver
+        
 
     - name: Run tests
       run: |
         xvfb-run --server-args='-screen 0 1920x1080x24' pytest --capture=tee-sys --disable-warnings --env=$ENV --browser=$BROWSER --headless
+    - name: Attest Build Provenance
+      uses: actions/attest-build-provenance@v1.3.3
+            
