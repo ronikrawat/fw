@@ -41,6 +41,7 @@ def _config(request):
 def driver(request, _config):
     browser = request.config.option.browser
     headless = request.config.option.headless
+
     if browser.upper() == "CHROME":
         options = webdriver.ChromeOptions()
         if headless:
@@ -59,7 +60,7 @@ def driver(request, _config):
     else:
         raise Exception("Not a valid web browser")
     _driver.get(_config.url)
-    _driver.set_window_size(1920, 1080)
+    _driver.maximize_window()
     yield _driver
     _driver.close()
 
