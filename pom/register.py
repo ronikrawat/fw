@@ -1,20 +1,21 @@
 from _lib import Selenium_Wrapper
-from pom.homepage import Homepage
-class RegisterationPage:
+from exel_lib import read_locators
 
-    def __init__(self,driver):
+
+class RegisterationPage:
+    locator = read_locators("registrationpage")
+    def __init__(self, driver):
         self.driver = driver
         self.wrapper = Selenium_Wrapper(self.driver)
-        self.homepage = Homepage(self.driver)
-    def register(self,gender,fname,lname,email,password):
-        self.homepage.click_register()
+
+    def register(self, gender, fname, lname, email, password):
         if gender.upper() == "MALE":
-            self.wrapper.click_element(("id", "gender-male"))
+            self.wrapper.click_element(self.locator.get("rdo_male"))
         elif gender.upper() == "FEMALE":
-            self.wrapper.click_element(("id", "gender-female"))
-        self.wrapper.send_text(("id", "FirstName"), fname)
-        self.wrapper.send_text(("id", "LastName"), lname)
-        self.wrapper.send_text(("id", "Email"), email)
-        self.wrapper.send_text(("id", "Password"), password)
-        self.wrapper.send_text(("id", "ConfirmPassword"), password)
-        self.wrapper.click_element(("id", "register-button"))
+            self.wrapper.click_element(self.locator.get("rdo_female"))
+        self.wrapper.send_text(self.locator.get("txt_fname"), fname)
+        self.wrapper.send_text(self.locator.get("txt_lname"), lname)
+        self.wrapper.send_text(self.locator.get("txt_email"), email)
+        self.wrapper.send_text(self.locator.get("txt_password"), password)
+        self.wrapper.send_text(self.locator.get("txt_confirmpassword"), password)
+        self.wrapper.click_element(self.locator.get("btn_register"))

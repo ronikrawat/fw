@@ -2,6 +2,7 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.expected_conditions import visibility_of_element_located
 
+
 def _wait(func):
     def wrapper(*args, **kwargs):
         wait = WebDriverWait(args[0].driver, 10)

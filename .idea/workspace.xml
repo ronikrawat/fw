@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d64d160-f704-4559-ad1b-b694b42dd417" name="Changes" comment="adding POM design">
-      <change afterPath="$PROJECT_DIR$/.idea/pythonProject1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_lib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom/homepage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom/login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom/register.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/exel_lib.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/objects.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/_lib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom/homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pom/homepage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/pom/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/pom/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_register.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,27 +42,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for test_login.Test_Login.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_login.Test_Login.test_login.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_login.Test_login.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_login.test_login.executor&quot;: &quot;Debug&quot;,
-    &quot;Python tests.Python tests in test_login.py.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ronik/Desktop/framework/framework&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_login.Test_Login.executor": "Run",
+    "Python tests.Python tests for test_login.Test_Login.test_login.executor": "Run",
+    "Python tests.Python tests for test_login.Test_login.executor": "Run",
+    "Python tests.Python tests for test_login.test_login.executor": "Debug",
+    "Python tests.Python tests for test_register.Test_Register.test_register.executor": "Run",
+    "Python tests.Python tests in test_login.py.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/ronik/Desktop/framework/framework"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ronik\Desktop\framework\framework" />
       <recent name="C:\Users\ronik\Desktop\framework\framework\tests" />
       <recent name="C:\Users\ronik\Desktop\framework\framework\pom" />
-      <recent name="C:\Users\ronik\Desktop\framework\framework" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_login.Test_Login.test_login">
+  <component name="RunManager" selected="Python tests.Python tests for test_register.Test_Register.test_register">
     <configuration name="Python tests for test_login.Test_Login.test_login" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pythonProject1" />
       <option name="ENV_FILES" value="" />
@@ -76,6 +76,21 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_login.Test_Login.test_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_register.Test_Register.test_register" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_register.Test_Register.test_register&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -139,28 +154,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_login.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="pythonProject1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_login.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_register.Test_Register.test_register" />
         <item itemvalue="Python tests.Python tests for test_login.Test_Login.test_login" />
         <item itemvalue="Python tests.Python tests for tests.test_login.Test_Login" />
         <item itemvalue="Python tests.Python tests for tests.test_login.Test_Login.test_login" />
         <item itemvalue="Python tests.Python tests for tests.test_login" />
-        <item itemvalue="Python tests.Python tests in test_login.py" />
       </list>
     </recent_temporary>
   </component>

@@ -1,17 +1,15 @@
 from _lib import Selenium_Wrapper
-from pom.homepage import Homepage
+from exel_lib import read_locators
 
 
 class LoginPage:
+    locator = read_locators("loginpage")
 
-    def __init__(self, driver, config):
+    def __init__(self, driver):
         self.driver = driver
         self.wrapper = Selenium_Wrapper(self.driver)
-        self.homepage = Homepage(self.driver)
-        self.config = config
 
-    def login(self):
-        self.homepage.click_login()
-        self.wrapper.send_text(("id", "Email"), self.config.id)
-        self.wrapper.send_text(("id", "Password"), self.config.password)
-        self.wrapper.click_element(("css selector", ".login-button"))
+    def login(self, email, password):
+        self.wrapper.send_text(self.locator["txt_email"], email)
+        self.wrapper.send_text(self.locator["txt_password"], password)
+        self.wrapper.click_element(self.locator["btn_login"])

@@ -1,12 +1,18 @@
 from selenium import webdriver
 from pytest import fixture
 
+from pom.homepage import Homepage
+from pom.login import LoginPage
+from pom.register import RegisterationPage
+
+
 # env = "test"
 # browser = "chrome"
 def pytest_addoption(parser):
     parser.addoption("--env", action="store", default="test", dest="env", help="Pass the env: Test or Stage[env=test]")
     parser.addoption("--browser", action="store", default="chrome", dest="browser", help="Pass browser[browser=chrome]")
     parser.addoption("--headless", action="store_true", dest="headless")
+
 
 class TestEnv:
     url = "https://demowebshop.tricentis.com/"
@@ -56,3 +62,12 @@ def driver(request, _config):
     _driver.set_window_size(1920, 1080)
     yield _driver
     _driver.close()
+
+@fixture
+def pages(driver):
+    class Pages:
+        loginpage = LoginPage(driver)
+        homepage = Homepage(driver)
+        regpage = RegisterationPage(driver)
+
+    return Pages()
