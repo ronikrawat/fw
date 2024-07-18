@@ -1,9 +1,10 @@
 from _lib import Selenium_Wrapper
-from exel_lib import read_locators,add_elements
+from exel_lib import add_elements
+
 
 @add_elements("loginpage")
 class LoginPage:
-    #locator = read_locators("loginpage")
+    # locator = read_locators("loginpage")
 
     def __init__(self, driver):
         self.driver = driver

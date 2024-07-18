@@ -1,5 +1,5 @@
 from _lib import Selenium_Wrapper
-from exel_lib import read_locators,add_elements
+from exel_lib import add_elements
 
 
 @add_elements("registrationpage")

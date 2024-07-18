@@ -64,6 +64,7 @@ def driver(request, _config):
     yield _driver
     _driver.close()
 
+
 @fixture
 def pages(driver):
     class Pages:
