@@ -1,4 +1,4 @@
-name: Python application
+name: Code Formatting
 
 on:
   push:
@@ -9,13 +9,8 @@ on:
       - main
 
 jobs:
-  build:
-
+  autopep8:
     runs-on: ubuntu-latest
-
-    env:
-      ENV: test
-      BROWSER: chrome
 
     steps:
     - name: Checkout repository
@@ -24,28 +19,21 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.x
+        python-version: '3.x'
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install autopep8
 
-    - name: Set up Chrome driver
+    - name: Run autopep8
       run: |
-        sudo apt-get update
-        sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4
-        # Download the correct version of ChromeDriver for Chrome 126
-        wget -N https://chromedriver.storage.googleapis.com/126.0.6478.126/chromedriver_linux64.zip -P ~/
-        unzip ~/chromedriver_linux64.zip -d ~/
-        sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
-        sudo chown root:root /usr/local/bin/chromedriver
-        sudo chmod 0755 /usr/local/bin/chromedriver
+        autopep8 --in-place --recursive .
         
-
-    - name: Run tests
+    - name: Check for uncommitted changes
       run: |
-        xvfb-run --server-args='-screen 0 1920x1080x24' pytest --capture=tee-sys --disable-warnings --env=$ENV --browser=$BROWSER --headless
-    - name: Attest Build Provenance
-      uses: actions/attest-build-provenance@v1.3.3
-            
+        if [[ `git status --porcelain` ]]; then
+          echo "There are uncommitted changes";
+          exit 1;
+        else
+          echo "No uncommitted changes";
+        fi
