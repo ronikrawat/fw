@@ -53,6 +53,6 @@ def driver(request, _config):
     else:
         raise Exception("Not a valid web browser")
     _driver.get(_config.url)
-   # _driver.maximize_window()
+    _driver.set_window_size(1920, 1080)
     yield _driver
     _driver.close()
