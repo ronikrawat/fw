@@ -35,7 +35,8 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4
-        wget -N https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip -P ~/
+        # Download the correct version of ChromeDriver for Chrome 126
+        wget -N https://chromedriver.storage.googleapis.com/126.0.6478.126/chromedriver_linux64.zip -P ~/
         unzip ~/chromedriver_linux64.zip -d ~/
         sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
         sudo chown root:root /usr/local/bin/chromedriver
@@ -43,4 +44,4 @@ jobs:
 
     - name: Run tests
       run: |
-        xvfb-run --server-args='-screen 0 1920x1080x24' pytest --capture=tee-sys --disable-warnings
+        xvfb-run --server-args='-screen 0 1920x1080x24' pytest --capture=tee-sys --disable-warnings --env=$ENV --browser=$BROWSER --headless
