@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d64d160-f704-4559-ad1b-b694b42dd417" name="Changes" comment="adding POM design">
-      <change afterPath="$PROJECT_DIR$/exel_lib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objects.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata.xls" afterDir="false" />
+    <list default="true" id="0d64d160-f704-4559-ad1b-b694b42dd417" name="Changes" comment="Reading locators from excel to dictonary">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/_lib.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exel_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/exel_lib.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom/homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pom/homepage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/pom/login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/pom/register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_register.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,20 +35,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for test_login.Test_Login.executor": "Run",
-    "Python tests.Python tests for test_login.Test_Login.test_login.executor": "Run",
-    "Python tests.Python tests for test_login.Test_login.executor": "Run",
-    "Python tests.Python tests for test_login.test_login.executor": "Debug",
-    "Python tests.Python tests for test_register.Test_Register.test_register.executor": "Run",
-    "Python tests.Python tests in test_login.py.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/ronik/Desktop/framework/framework"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_login.Test_Login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_login.Test_Login.test_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_login.Test_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_login.test_login.executor&quot;: &quot;Debug&quot;,
+    &quot;Python tests.Python tests for test_register.Test_Register.test_register.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_login.py.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ronik/Desktop/framework/framework&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ronik\Desktop\framework\framework" />
@@ -188,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721217783686</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Reading locators from excel to dictonary">
+      <option name="closed" value="true" />
+      <created>1721318248739</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721318248739</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,6 +205,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding POM design" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding POM design" />
+    <MESSAGE value="Reading locators from excel to dictonary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reading locators from excel to dictonary" />
   </component>
 </project>
