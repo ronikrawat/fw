@@ -1,22 +1,13 @@
 from pytest import mark
+from exel_lib import return_header, return_test_data
 
 
-header = "gender, fname, lname, email, password"
-test_data = [
-    ("Male",
-     "Steve",
-     "Jobs",
-     "steve.jobs@apple.com",
-     "Password123"),
-    ("Female",
-     "Nicole",
-     "Turner",
-     "nicole.turner@apple.com",
-     "Password123")]
-
-
-@mark.parametrize(header, test_data)
 class Test_Register:
-    def test_register(self, pages, gender, fname, lname, email, password):
+    header = return_header("smoke", "test_registration")
+    data = return_test_data("smoke", "test_registration")
+
+    @mark.parametrize(header, data)
+    def test_register(self, pages, gender, fname, lname, email, password, confirmpassword):
         pages.homepage.click_register()
-        pages.regpage.register(gender, fname, lname, email, password)
+        pages.regpage.register(gender, fname, lname,
+                               email, password, confirmpassword)
